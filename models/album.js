@@ -21,4 +21,16 @@ class Album{
             })
         })
     }
+
+    static async geById(id){
+        return new Promise ((id) => {
+            db.query('SELECT * FROM albums WHERE id = ?', [id], (err,results) =>{
+                if(err){
+                    reject(err)
+                }
+                return results
+            })
+        
+    }
+)}
 }
