@@ -22,7 +22,7 @@ class Album{
         })
     }
 
-    static async geById(id){
+    static async getById(id){
         return new Promise ((id) => {
             db.query('SELECT * FROM albums WHERE id = ?', [id], (err,results) =>{
                 if(err){
@@ -33,4 +33,6 @@ class Album{
         
     }
 )}
+
+
 }
