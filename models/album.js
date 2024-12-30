@@ -34,5 +34,13 @@ class Album{
     }
 )}
 
+    static async deleteById(id){
+        db.query('DELETE * FROM albums WHERE id = ?', [id], (err, results) =>{
+            if(err){
+                reject (err)
+            }
+        })
+        
+    }
 
 }
