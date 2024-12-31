@@ -39,8 +39,9 @@ class Album{
             if(err){
                 reject (err)
             }
+            return true
         })
-        
-    }
+    
+}
 
 }
